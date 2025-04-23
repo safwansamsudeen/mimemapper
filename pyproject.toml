@@ -1,12 +1,12 @@
 # pyproject.toml
 
 [build-system]
-requires = ["setuptools>=61.0.0", "wheel"]
+requires = ["setuptools>=61.0.0", "setuptools-scm>=8.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "mimemapper"
-version = "0.2.0"
+version = "0.3.0"
 description = "Convert between MIME types and extensions - straight from the IANA registry"
 readme = "README.md"
 authors = [{ name = "Safwan Samsudeen", email = "safwansamsudeen.c@gmail.com" }]
@@ -20,4 +20,4 @@ keywords = ["mime", "file", "extensions"]
 requires-python = ">=3.9"
 
 [project.urls]
-Homepage = "https://github.com/safwansamsudeen/mime-mapper"
+Homepage = "https://github.com/safwansamsudeen/mimemapper"
