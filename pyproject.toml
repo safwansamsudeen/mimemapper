@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mimemapper"
-version = "1.0.0"
+version = "0.0=1.0"
 description = "Convert between MIME types and extensions - straight from the IANA registry"
 readme = "README.md"
 authors = [{ name = "Safwan Samsudeen", email = "safwansamsudeen.c@gmail.com" }]
@@ -16,11 +16,9 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
 ]
+readme = "README.md"
 keywords = ["mime", "file", "extensions"]
 requires-python = ">=3.9"
 
 [project.urls]
 Homepage = "https://github.com/safwansamsudeen/mime-mapper"
-
-[project.scripts]
-mime_map = "src.__init_:main"
