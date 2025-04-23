@@ -9,7 +9,7 @@ TEST_MIME_TYPES = {
     "recording.txt": "text/plain",
 }
 
-from lib import get_mime_type
+from src import get_mime_type
 
 for file_name, ext in TEST_MIME_TYPES.items():
     res = get_mime_type(file_name.split(".")[-1])

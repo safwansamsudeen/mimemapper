@@ -1,10 +1,13 @@
-import json
+import json, os
 import mimetypes
+import importlib.resources
+from pathlib import PosixPath
 
-with open("./mime_to_ext.json") as f:
+MODULE_PATH = importlib.resources.files(__package__) if __package__ else PosixPath("./")
+
+with open(MODULE_PATH / "mime_to_ext.json") as f:
     MIME_TO_EXT_MAP = json.load(f)
-
-with open("./ext_to_mime.json") as f:
+with open(MODULE_PATH / "ext_to_mime.json") as f:
     EXT_TO_MIME_MAP = json.load(f)
 
 
