@@ -12,9 +12,12 @@ with open(MODULE_PATH / "ext_to_mime.json") as f:
 
 
 def get_mime_type(ext, all=False, native_first=True):
+    ext = ext.split(".")[-1]
     # Based on config, use native eagerly
-    if native_first and (native := mimetypes.guess_type(f"test.{ext}")[0]):
+    native = mimetypes.guess_type(f"test.{ext}")[0]
+    if (not all and native_first) and native:
         return native
+
     # Use as fallback always
     if ext not in EXT_TO_MIME_MAP or not EXT_TO_MIME_MAP[ext]:
         return native
